@@ -52,6 +52,11 @@ keys = [
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
     Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
+
+    # Install brightnessctl before continue
+    Key([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl s 10%+"), desc='brightness UP'),
+    Key([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl s 10%-"), desc='brightness Down'),
+
 ]
 
 # Add key bindings to switch VTs in Wayland.
@@ -138,6 +143,10 @@ screens = [
                 widget.Systray(),
                 widget.Clock(format="%Y-%m-%d %a %I:%M %p"),
                 widget.QuickExit(),
+                widget.Battery(),
+                widget.Memory(
+                    update_interval=2,
+                ),
             ],
             24,
              border_width=[2, 0, 2, 0],  # Draw top and bottom borders
