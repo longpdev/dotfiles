@@ -127,6 +127,8 @@ extension_defaults = widget_defaults.copy()
 
 screens = [
     Screen(
+        wallpaper='~/.config/qtile/touhou-blue-wallpaper.jpg',
+        wallpaper_mode='stretch',
         top=bar.Bar(
             [
                 widget.CurrentLayout(),
@@ -212,4 +214,4 @@ wl_xcursor_size = 24
 #
 # We choose LG3D to maximize irony: it is a 3D non-reparenting WM written in
 # java that happens to be on java's whitelist.
-wmname = "LG3D"
+wmname = "Qtile"
