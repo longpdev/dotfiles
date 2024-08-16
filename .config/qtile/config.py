@@ -154,9 +154,9 @@ screens = [
                     update_interval=2,
                 ),
             ],
-            24,
-            border_width=[2, 0, 2, 0],  # Draw top and bottom borders
-            border_color=["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta
+            28,
+            # border_width=[2, 0, 2, 0],  # Draw top and bottom borders
+            # border_color=["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta
         ),
         # You can uncomment this variable if you see that on X11 floating resize/moving is laggy
         # By default we handle these events delayed to already improve performance, however your system might still be struggling
